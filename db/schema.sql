@@ -1,5 +1,5 @@
 ### Schema
-
+Drop DATABASE burgerDB;
 CREATE DATABASE burgerDB;
 USE burgerDB;
 
