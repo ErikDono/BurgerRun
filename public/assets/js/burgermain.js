@@ -4,13 +4,13 @@ $(document).ready(function () {
     $(".change-eaten").on("click", function (event) {
         var id = $(this).data("id");
         var neweaten = $(this).data("neweaten");
-
+        console.log(neweaten)
         var neweatenState = {
-            1: neweaten
+            neweaten: true
         };
 
         // Send the PUT request.
-        $.ajax("/api/burgers/" + id, {
+        $.ajax("/api/burgers/", {
             type: "PUT",
             data: neweatenState
         }).then(

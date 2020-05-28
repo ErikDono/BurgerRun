@@ -16,13 +16,14 @@ module.exports = function (app) {
   });
 
   app.post("/api/burgers", function (req, res) {
+    console.log(req.body)
     burgers.create([
       "burgerName", "eaten"
     ], [
-      req.body.burgerName, req.body.eaten
+      req.body.name, req.body.eaten
     ], function (result) {
       // Send back the ID of the new burger
-      res.json({ id: result.insertId });
+      res.json({ burgers });
     });
   });
 

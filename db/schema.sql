@@ -1,7 +1,4 @@
-### Schema
-Drop DATABASE burgerDB;
-CREATE DATABASE burgerDB;
-USE burgerDB;
+USE c241uhxczjumz6gb;
 
 CREATE TABLE burgers
 (
@@ -10,4 +7,3 @@ CREATE TABLE burgers
 	eaten BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
-											

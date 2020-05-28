@@ -1,4 +1,4 @@
-USE burgerDB;
+USE c241uhxczjumz6gb;
 
 INSERT INTO burgers
     (burgerName)
@@ -9,3 +9,4 @@ INSERT INTO burgers
 VALUES
     ('Big Boi', true);
 
+select * from burgers
