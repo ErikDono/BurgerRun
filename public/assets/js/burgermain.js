@@ -2,13 +2,14 @@ $(document).ready(function () {
 
     // devour
     $(".change-eaten").on("click", function (event) {
+        event.preventDefault()
+        console.log("clicked")
         var id = $(this).data("id");
         var neweaten = $(this).data("neweaten");
-
+        console.log(neweaten)
         var neweatenState = {
             eaten: true
         };
-
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",

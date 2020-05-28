@@ -28,7 +28,7 @@ module.exports = function (app) {
   });
 
   app.put("/api/burgers/:eaten", function (req, res) {
-    var condition = "eaten = " + req.params.eaten;
+    var condition = "id = " + req.params.id;
 
     console.log("condition", condition);
 
