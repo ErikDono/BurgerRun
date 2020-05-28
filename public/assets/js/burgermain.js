@@ -4,13 +4,13 @@ $(document).ready(function () {
     $(".change-eaten").on("click", function (event) {
         var id = $(this).data("id");
         var neweaten = $(this).data("neweaten");
-        console.log(neweaten)
+
         var neweatenState = {
-            neweaten: true
+            eaten: true
         };
 
         // Send the PUT request.
-        $.ajax("/api/burgers/", {
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: neweatenState
         }).then(
@@ -24,6 +24,7 @@ $(document).ready(function () {
     // add a burger
     $(".create-burger").on("submit", function (event) {
         event.preventDefault();
+        console.log("clicked")
         var newburger = {
             name: $("#newburger").val().trim(),
             eaten: $("[name=eaten]:checked").val().trim()

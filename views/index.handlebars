@@ -21,20 +21,20 @@
         </ul>
     </div>
 </div>
-<div class="container row" style="margin:20px">
-    <div class="card" style="width:100%">
-        <h2>Make a new Burger</h2>
-        <form class=" create-burger">
-            <div class="form-group">
-                <label>Burger Name:</label>
-                <input id="newburger" type="text" id="ca" name="name">
-            </div>
-            <div class="form-group">
-                <label for="eaten">Eat this right away?</label><br>
-                <input type="radio" name="eaten" value="1" checked> I cant wait!<br>
-                <input type="radio" name="eaten" value="0"> I can wait...
-            </div>
-            <button type="submit"> Add the burger to the menu! </button>
-        </form>
-    </div>
+<div class="card" style="margin-left:30%; margin-right:33.3%; margin-top: 20px">
+
+    <h2>Make a new Burger</h2>
+    <form class="create-burger" action="/api/burgers" method="POST">
+        <div class="form-group">
+            <label>Burger Name:</label>
+            <input id="newburger" type="text" id="ca" name="name">
+        </div>
+        <div class="form-group">
+            <label for="eaten" name="burger_eaten">Eat this right away?</label><br>
+            <input type="radio" name="eaten" value="1" checked> I cant wait!<br>
+            <input type="radio" name="eaten" value="0"> I can wait...
+        </div>
+        <button type="submit"> Add the burger to the menu! </button>
+    </form>
+
 </div>

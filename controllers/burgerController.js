@@ -23,7 +23,7 @@ module.exports = function (app) {
       req.body.name, req.body.eaten
     ], function (result) {
       // Send back the ID of the new burger
-      res.json({ burgers });
+      res.redirect("/");
     });
   });
 
